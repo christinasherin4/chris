@@ -1,0 +1,167 @@
+<!Doctype html>
+<html lang = "en">
+<head>
+
+<meta charset = "UTF-8">
+<title>DATA STRUCTURES</title>
+</head>
+
+ <body>
+<style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+body, html {
+  height: 50%;
+  margin: 35px;
+}
+
+.bg {
+
+  background-image: url("ds1.gif");
+  height: 100%; 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+</style>
+<style>
+p{
+  margin:35px;
+}
+
+
+<div class="bg"></div>
+</style>
+<header>
+<h1>DATA STRUCTURES</h1>
+<hr>
+<h2>IMPLEMENTATION OF STACK </h2>
+<br>
+</header>
+
+
+<figure>
+	<img src="C:\Users\Christina\Desktop\fu.gif" width=400px
+	 alt = "Programming">
+	<figcaption>Stack</figcaption>
+</figure>
+<h3> Stack  Data Structure </h3>
+<main>
+  <p>
+    <br>Stack is a linear data structure which follows a particular order in which the operations are performed. The order may be LIFO(Last In First Out) or FILO(First In Last Out).<br>
+    <hr>
+Mainly the following three basic operations are performed in the stack:
+     
+     <ol><b>Push:</b> Adds an item in the stack. If the stack is full, then it is said to be an Overflow condition.</ol>
+<figure>
+  <img src="C:\Users\Christina\Desktop\push crct.gif" width=400px
+   alt = "Programming">
+  <figcaption>PUSH</figcaption>
+</figure>
+
+<hr>
+     <ol><b>Pop:</b> Removes an item from the stack. The items are popped in the reversed order in which they are pushed. If the stack is empty, then it is said to be an Underflow condition.</ol>
+     <figure>
+  <img src="C:\Users\Christina\Desktop\popy.gif" width=400px
+   alt = "Programming">
+  <figcaption>POP</figcaption>
+</figure>
+
+<hr>
+     <ol><b>Peek or Top:</ol></b> Returns top element of stack.</ol>
+
+       <figure>
+  <img src="C:\Users\Christina\Desktop\top.gif" width=400px
+   alt = "Programming">
+  <figcaption>POP</figcaption>
+</figure>
+<hr>
+     <ol><b>isEmpty:</b>Returns true if stack is empty, else false.</ol>
+
+     <figure>
+  <img src="C:\Users\Christina\Desktop\pushy.gif" width=400px
+   alt = "Programming">
+  <figcaption>POP</figcaption>
+</figure>
+
+  	<br>
+    <hr>
+  </main>
+
+ <br>
+</body>
+ <h1><b>PROGRAM IN C++ <b></h1>
+<code>
+  #include <bits/stdc++.h> 
+  
+using namespace std;<br> 
+  
+#define MAX 1000 <br>
+  
+<br>class Stack { 
+    <br>int top; 
+  
+<br>public: 
+    <br>int a[MAX]; // Maximum size of Stack 
+  
+    <br>Stack() { top = -1; } 
+    <br>bool push(int x); 
+    <br>int pop(); 
+    <br>int peek(); 
+    <br>bool isEmpty(); 
+<br>}; 
+  
+<br>bool Stack::push(int x) 
+<br>{ 
+    <br>if (top >= (MAX - 1)) { 
+       <br> cout << "Stack Overflow"; 
+        <br>return false; 
+    <br>} 
+    <br>else { 
+        <br>a[++top] = x; 
+        <br>cout << x << " pushed into stack\n"; 
+     <br>   return true; 
+    <br>} 
+<br>} 
+  
+<br>int Stack::pop() 
+<br>{ 
+    <br>if (top < 0) { 
+        <br>cout << "Stack Underflow"; 
+        <br>return 0; 
+    <br>} 
+    <br>else { 
+       <br> int x = a[top--]; 
+        <br>return x; 
+ <br>   } 
+<br>} 
+<br>int Stack::peek() 
+<br>{ 
+    <br>if (top < 0) { 
+        <br>cout << "Stack is Empty"; 
+        <br>return 0; 
+    <br>} 
+    <br>else { 
+        <br>int x = a[top]; 
+        <br>return x; 
+    <br>} 
+<br>} 
+  
+<br>bool Stack::isEmpty() 
+<br>{ 
+    <br>return (top < 0); 
+<br>} 
+  
+// Driver program to test above functions 
+<br>int main() 
+<br>{ 
+    <br>class Stack s; 
+    <br>s.push(10); 
+    <br>s.push(20); 
+    <br>s.push(30); 
+    <br>cout << s.pop() << " Popped from stack\n"; 
+  
+    <br>return 0; 
+<br>} 
+</code>
+
+<br>
